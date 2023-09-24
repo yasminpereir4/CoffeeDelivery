@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.tsx", "./App.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Baloo 2"],
+      },
+    },
   },
   plugins: [],
 };
