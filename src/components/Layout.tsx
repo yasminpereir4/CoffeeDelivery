@@ -12,13 +12,13 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
         <View className="flex-row p-4 w-full justify-between">
           <View className="flex-row items-center gap-2 text-base">
             <Fontisto name="map-marker-alt" size={24} color="#8047F8" />
-            <Text className="text-white">São Paulo, SP</Text>
+            <Text className="text-white font-subtitle">São Paulo, SP</Text>
           </View>
           <View className="">
             <FontAwesome5 name="shopping-cart" size={24} color="#C47F17" />
           </View>
         </View>
-        <Text className="text-white font-bold text-xl p-4 font-['sans']">
+        <Text className="text-white text-xl p-4 font-subtitle">
           Encontre o café perfeito para qualquer hora do dia
         </Text>
         <View className="w-full p-4 relative">

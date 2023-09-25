@@ -4,7 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Baloo 2"],
+        title: "Roboto_700Bold",
+        subtitle: "Baloo2_700Bold",
+        alt: "Roboto_400Regular",
       },
     },
   },
