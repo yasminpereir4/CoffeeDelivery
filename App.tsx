@@ -1,5 +1,6 @@
 import { Baloo2_700Bold, useFonts } from "@expo-google-fonts/baloo-2";
 import { Roboto_400Regular, Roboto_700Bold } from "@expo-google-fonts/roboto";
+import { NavigationContainer } from "@react-navigation/native";
 import { Home } from "./src/Home";
 
 export default function App() {
@@ -13,5 +14,9 @@ export default function App() {
     return null;
   }
 
-  return <Home />;
+  return (
+    <NavigationContainer>
+      <Home />
+    </NavigationContainer>
+  );
 }

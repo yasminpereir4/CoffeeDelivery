@@ -11,6 +11,8 @@
   "dependencies": {
     "@expo-google-fonts/baloo-2": "^0.2.3",
     "@expo-google-fonts/roboto": "^0.2.3",
+    "@react-navigation/native": "^6.1.9",
+    "@types/react-native-snap-carousel": "^3.8.6",
     "expo": "~49.0.11",
     "expo-status-bar": "~1.6.0",
     "nativewind": "^2.0.11",
