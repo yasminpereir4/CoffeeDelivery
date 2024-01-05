@@ -14,6 +14,10 @@ interface Card {
   price?: string;
   imageCoffee: ImageSourcePropType;
 }
+interface CoffeeOptions {
+  id: string;
+  text: string;
+}
 
 export const Home: React.FC = () => {
   const cards: Card[] = [
@@ -40,6 +44,20 @@ export const Home: React.FC = () => {
       description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
       price: "9,90",
       imageCoffee: irlandes,
+    },
+  ];
+  const coffeOptions: CoffeeOptions[] = [
+    {
+      id: "1",
+      text: "Tradicionais",
+    },
+    {
+      id: "2",
+      text: "Doces",
+    },
+    {
+      id: "3",
+      text: "Especiais",
     },
   ];
 
@@ -77,9 +95,22 @@ export const Home: React.FC = () => {
             Nossos cafés
           </Text>
           <View className="flex-row items-center justify-center mt-2">
-            <CoffeeOptions text="Tradicionais" />
-            <CoffeeOptions text="Doces" />
-            <CoffeeOptions text="Especiais" />
+            <FlatList
+              data={coffeOptions}
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              keyExtractor={coffeOptions => coffeOptions.id}
+              ListEmptyComponent={() => (
+                <View>
+                  <Text>Não foi localizado nenhuma loja perto de você! 😰</Text>
+                </View>
+              )}
+              renderItem={({ item, index }) => (
+                <View className="items-center">
+                  <CoffeeOptions id={item.id} text={item.text} />
+                </View>
+              )}
+            />
           </View>
         </View>
       </View>

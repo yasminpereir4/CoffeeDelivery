@@ -1,6 +1,7 @@
 import { Text, TouchableOpacity, View } from "react-native";
 
 interface CoffeeOptionsProps {
+  id: string;
   text: string;
 }
 
